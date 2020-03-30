@@ -11,27 +11,25 @@ let blackSquare = document.createElement('div'),
 blackSquare.className = 'black';
 whiteSquare.className = 'white';
 
-chess.append(blackSquare);
-// chess.append(whiteSquare);
-
-// chess.insertAdjacentElement('beforeend', whiteSquare);
 
 
+function game(extraClass) {
+    let  chess = document.querySelector('.chess'),
+        square = document.createElement('div');
+        square.classList.add("square");
 
-function game() {
-    for (let i = 0; i < 64; i++) {
+        if (extraClass) square.classList.add(extraClass);    
 
-        if(chessA[i] == chess) {
-            chess.insertBefore(whiteSquare, chessA[i+1]);
-        } else {
-            chess.insertBefore(whiteSquare, chessA[i]);
-        }
-    }
-    console.log(chessA);
+        chess.append(square);
 }
 
+for (let i = 0; i < 64; i++) {
 
-game();
+
+    let extraCalss = parseInt((i / 8) + i) % 2 == 0 ? 'white' : 'black'; 
+
+    game(extraCalss);
+  }
 
 
 
