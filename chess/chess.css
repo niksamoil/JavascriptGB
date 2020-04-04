@@ -1,0 +1,29 @@
+.chess {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+
+.black {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #795548;
+    width: 100px;
+    height: 100px;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #d1ddfd;
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    height: 70%;
+}
